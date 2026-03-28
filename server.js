@@ -6,6 +6,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/login.html");
+});
+
 // Dummy DB
 const students = [
   { admissionNo: "A101", name: "Pragya", fees: 5000 },
