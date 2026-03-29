@@ -14,7 +14,7 @@ async function studentLogin() {
 
   if (data.success) {
     localStorage.setItem("student", JSON.stringify(data.student));
-    window.location.href = "/index.html";
+    window.location.href = "/payment.html";
   } else {
     document.getElementById("msg").innerText = "❌ Invalid student";
   }
@@ -124,5 +124,5 @@ async function loadPayments() {
 // LOGOUT
 function logout() {
   localStorage.removeItem("student");
-  window.location.href = "/login.html";
+  window.location.href = "/index.html";
 }

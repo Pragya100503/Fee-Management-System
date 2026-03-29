@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>💳 Fee Payment</h1>
+
+  <p id="studentName"></p>
+
+  <input id="amount" value="5000" readonly>
+  
+  <button onclick="openPayment()">Pay Now</button>
+
+  <p id="status"></p>
+
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Select Payment</h2>
+    <button onclick="pay('UPI')">UPI</button>
+    <button onclick="pay('CARD')">Card</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

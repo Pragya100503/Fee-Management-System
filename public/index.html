@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Payment App</title>
+  <title>Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -9,25 +9,21 @@
 
 <div class="container">
 
-  <h1>💳 Fee Payment</h1>
+  <h1>🔐 Login</h1>
 
-  <p id="studentName"></p>
+  <h3>Student Login</h3>
+  <input id="admissionNo" placeholder="Admission No">
+  <button onclick="studentLogin()">Login</button>
 
-  <input id="amount" value="5000" readonly>
-  
-  <button onclick="openPayment()">Pay Now</button>
+  <hr>
 
-  <p id="status"></p>
+  <h3>Admin Login</h3>
+  <input id="adminUser" placeholder="Username">
+  <input id="adminPass" placeholder="Password" type="password">
+  <button onclick="adminLogin()">Login</button>
 
-</div>
+  <p id="msg"></p>
 
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <h2>Select Payment</h2>
-    <button onclick="pay('UPI')">UPI</button>
-    <button onclick="pay('CARD')">Card</button>
-    <button onclick="closeModal()">Cancel</button>
-  </div>
 </div>
 
 <script src="script.js"></script>

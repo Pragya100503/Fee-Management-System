@@ -1,16 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 
+const path = require("path");
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 // ✅ FIRST: force login page
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/login.html");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // ✅ THEN static files
 app.use(express.static("public", { index: false }));
+
 
 // Dummy DB
 const students = [
