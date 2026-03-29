@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 // ✅ THEN static files
-app.use(express.static("public"));
+app.use(express.static("public", { index: false }));
 
 // Dummy DB
 const students = [
